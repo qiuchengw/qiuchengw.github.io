@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>面板和序列 | SiaChart - Fast Trading Chart</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://hexo.io/zh-cn/docs/panel-series.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://hexo.io/zh-cn/docs/panel-series.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="SiaChart 3.7.1">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS 
+  <link rel="alternate" href="/atom.xml" title="SiaChart - Fast Trading Chart">
+  -->
+  <!-- Open Graph 
+  <meta name="description" content="每个图表（Chart）都至少包含一个面板（Panel），每个面板都包含至少一个序列（Series）。 面板图表中几乎所有的可视化元素都是在面板中显示的。图表提供的类方法中的第一个参数通常也都是面板句柄（HPANEL）。 添加面板当创建了图表实例后，可以通过图表的以下方法添加面板：/*! \brief 添加图表面板 * *    @param *    @return */HPANEL addPan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="面板和序列">
+<meta property="og:url" content="https://hexo.io/zh-cn/docs/panel-series.html">
+<meta property="og:site_name" content="SiaChart - Fast Trading Chart">
+<meta property="og:description" content="每个图表（Chart）都至少包含一个面板（Panel），每个面板都包含至少一个序列（Series）。 面板图表中几乎所有的可视化元素都是在面板中显示的。图表提供的类方法中的第一个参数通常也都是面板句柄（HPANEL）。 添加面板当创建了图表实例后，可以通过图表的以下方法添加面板：/*! \brief 添加图表面板 * *    @param *    @return */HPANEL addPan">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-11-21T09:04:09.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面板和序列">
+<meta name="twitter:description" content="每个图表（Chart）都至少包含一个面板（Panel），每个面板都包含至少一个序列（Series）。 面板图表中几乎所有的可视化元素都是在面板中显示的。图表提供的类方法中的第一个参数通常也都是面板句柄（HPANEL）。 添加面板当创建了图表实例后，可以通过图表的以下方法添加面板：/*! \brief 添加图表面板 * *    @param *    @return */HPANEL addPan">
+  -->
+  <!-- Google Analytics 
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-",
+          enable_page_level_ads: false
+     });
+  </script>
+  -->
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">新闻</a>
+      <a href="https://github.com/qiuchengw/siachart" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <!-- 
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+      -->
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/panel-series.html">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">面板和序列</h1>
+                <a href="https://github.com/qiuchengw/site/edit/master/source/zh-cn/docs/panel-series.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>每个<code>图表（Chart）</code>都至少包含一个<code>面板（Panel）</code>，每个面板都包含至少一个<code>序列（Series）</code>。</p>
+<h2 id="面板" class="article-heading"><a href="#面板" class="headerlink" title="面板"></a>面板<a class="article-anchor" href="#面板" aria-hidden="true"></a></h2><p>图表中几乎所有的可视化元素都是在面板中显示的。图表提供的类方法中的第一个参数通常也都是<code>面板句柄（HPANEL）</code>。</p>
+<h3 id="添加面板" class="article-heading"><a href="#添加面板" class="headerlink" title="添加面板"></a>添加面板<a class="article-anchor" href="#添加面板" aria-hidden="true"></a></h3><p>当创建了图表实例后，可以通过图表的以下方法添加面板：<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 添加图表面板</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *    @param</span></span><br><span class="line"><span class="comment"> *    @return</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function">HPANEL <span class="title">addPanel</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>面板在图表中显示的位置（顺序）为添加的顺序。</p>
+<h3 id="移除面板" class="article-heading"><a href="#移除面板" class="headerlink" title="移除面板"></a>移除面板<a class="article-anchor" href="#移除面板" aria-hidden="true"></a></h3><p>移除面板可以通过以下方法：<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 移除面板</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *    @param</span></span><br><span class="line"><span class="comment"> *    @return</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">removePanel</span><span class="params">(HPANEL panel)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>面板移除后，<code>面板句柄（HPANEL）</code>即失效。面板容器中的一切元素（Series/Objects …）均被销毁。</p>
+<h2 id="序列" class="article-heading"><a href="#序列" class="headerlink" title="序列"></a>序列<a class="article-anchor" href="#序列" aria-hidden="true"></a></h2><p><code>序列（Series）</code>是图表的基础可视化元素。</p>
+<h3 id="添加序列" class="article-heading"><a href="#添加序列" class="headerlink" title="添加序列"></a>添加序列<a class="article-anchor" href="#添加序列" aria-hidden="true"></a></h3><p>通过以下方法添加序列：<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 添加一个序列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *    @param  panel 序列要添加的面板</span></span><br><span class="line"><span class="comment"> *    @param  series_name 序列名字</span></span><br><span class="line"><span class="comment"> *    @param  type 序列类型</span></span><br><span class="line"><span class="comment"> *    @param  datanames 序列需要的数据名字</span></span><br><span class="line"><span class="comment"> *    @return   false |</span></span><br><span class="line"><span class="comment"> *      1，如果序列数据名找不到</span></span><br><span class="line"><span class="comment"> *      2，name冲突</span></span><br><span class="line"><span class="comment"> *      3，panel找不到</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">addSeries</span><span class="params">(HPANEL panel, <span class="keyword">const</span> SkString&amp; series_name, SeriesType typ, <span class="keyword">const</span> SkTArray&lt;SkString&gt;&amp; datanames)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">addSeries</span><span class="params">(HPANEL panel, <span class="keyword">const</span> SkString&amp; series_name, SeriesType typ, <span class="keyword">const</span> SkString&amp; dataname)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>需要注意的是，在同一个面板中，序列名称是唯一的，不可冲突。如果序列名字已存在，序列添加失败。</p>
+<h3 id="移除序列" class="article-heading"><a href="#移除序列" class="headerlink" title="移除序列"></a>移除序列<a class="article-anchor" href="#移除序列" aria-hidden="true"></a></h3><p>通过以下方法移除序列：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 移除已存在的序列</span></span><br><span class="line"><span class="comment"> *	</span></span><br><span class="line"><span class="comment"> *    @param	panel	序列所在面板</span></span><br><span class="line"><span class="comment"> *    @param	series_name	序列名</span></span><br><span class="line"><span class="comment"> *    @return	</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">removeSeries</span><span class="params">(HPANEL panel, <span class="keyword">const</span> SkString&amp; series_name)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>注意：序列的移除不会导致序列关联数据的移除。数据的删除请参考 <a href="datasource.html">数据源</a> 的相关章节。</p>
+<blockquote>
+<h2 id="其他参考" class="article-heading"><a href="#其他参考" class="headerlink" title="其他参考"></a>其他参考<a class="article-anchor" href="#其他参考" aria-hidden="true"></a></h2><ol>
+<li><a href="series-style.html">序列的外观定制</a></li>
+<li><a href="datasource.html">数据源的操作</a></li>
+<li><a href="precision.html">数据的精度显示</a></li>
+</ol>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-11-21T09:04:09.293Z" itemprop="dateModified">上次更新：2018-11-21</time>
+                <a href="datasource.html" class="article-footer-prev" title="数据源"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="precision.html" class="article-footer-next" title="显示精度"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=hexoio" id="_carbonads_js"></script> -->
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#面板"><span class="toc-text">面板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加面板"><span class="toc-text">添加面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移除面板"><span class="toc-text">移除面板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列"><span class="toc-text">序列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加序列"><span class="toc-text">添加序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移除序列"><span class="toc-text">移除序列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他参考"><span class="toc-text">其他参考</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">初步认识</strong><a href="index.html" class="sidebar-link">图表简介</a><a href="series-types.html" class="sidebar-link">认识序列</a><a href="example.html" class="sidebar-link">快速上手：一个例子</a><strong class="sidebar-title">定制图表</strong><a href="builtin-func.html" class="sidebar-link">启用/禁用内建功能</a><a href="datasource.html" class="sidebar-link">数据源</a><a href="panel-series.html" class="sidebar-link current">面板和序列</a><a href="precision.html" class="sidebar-link">显示精度</a><a href="add-object.html" class="sidebar-link">添加对象</a><a href="crosshair.html" class="sidebar-link">十字线</a><a href="zoom-view.html" class="sidebar-link">视图缩放/移动</a><a href="use-tooltip.html" class="sidebar-link">使用提示（Tooltip）</a><a href="use-dict.html" class="sidebar-link">字典翻译</a><strong class="sidebar-title">外观显示</strong><a href="style-luasyntax.html" class="sidebar-link">lua配置语法基础</a><a href="style-luaconfig.html" class="sidebar-link">配置文件</a><a href="style-series.html" class="sidebar-link">序列(Series)外观</a><strong class="sidebar-title">公式系统（公式）</strong><a href="formula-builtin.html" class="sidebar-link">使用内建公式</a><a href="formula-dev.html" class="sidebar-link">自定义公式开发</a><strong class="sidebar-title">对象</strong><a href="object-overview.html" class="sidebar-link">对象概览</a><a href="object-position.html" class="sidebar-link">对象的定位</a><a href="object-text.html" class="sidebar-link">文本对象</a><a href="object-picture.html" class="sidebar-link">图片对象</a><a href="object-movie.html" class="sidebar-link">动态对象</a><a href="object-custom.html" class="sidebar-link">自定义对象</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://piaode.ren" target="_blank">qiuchengw - 漂的人</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+     <!-- <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a> -->
+      <a href="https://piaode.ren" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/qiuchengw/siachart" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">新闻</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/qiuchengw/siachart" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">初步认识</strong><a href="index.html" class="mobile-nav-link">图表简介</a><a href="series-types.html" class="mobile-nav-link">认识序列</a><a href="example.html" class="mobile-nav-link">快速上手：一个例子</a><strong class="mobile-nav-title">定制图表</strong><a href="builtin-func.html" class="mobile-nav-link">启用/禁用内建功能</a><a href="datasource.html" class="mobile-nav-link">数据源</a><a href="panel-series.html" class="mobile-nav-link current">面板和序列</a><a href="precision.html" class="mobile-nav-link">显示精度</a><a href="add-object.html" class="mobile-nav-link">添加对象</a><a href="crosshair.html" class="mobile-nav-link">十字线</a><a href="zoom-view.html" class="mobile-nav-link">视图缩放/移动</a><a href="use-tooltip.html" class="mobile-nav-link">使用提示（Tooltip）</a><a href="use-dict.html" class="mobile-nav-link">字典翻译</a><strong class="mobile-nav-title">外观显示</strong><a href="style-luasyntax.html" class="mobile-nav-link">lua配置语法基础</a><a href="style-luaconfig.html" class="mobile-nav-link">配置文件</a><a href="style-series.html" class="mobile-nav-link">序列(Series)外观</a><strong class="mobile-nav-title">公式系统（公式）</strong><a href="formula-builtin.html" class="mobile-nav-link">使用内建公式</a><a href="formula-dev.html" class="mobile-nav-link">自定义公式开发</a><strong class="mobile-nav-title">对象</strong><a href="object-overview.html" class="mobile-nav-link">对象概览</a><a href="object-position.html" class="mobile-nav-link">对象的定位</a><a href="object-text.html" class="mobile-nav-link">文本对象</a><a href="object-picture.html" class="mobile-nav-link">图片对象</a><a href="object-movie.html" class="mobile-nav-link">动态对象</a><a href="object-custom.html" class="mobile-nav-link">自定义对象</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/panel-series.html">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

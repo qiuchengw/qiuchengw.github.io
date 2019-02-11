@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>视图缩放和移动 | SiaChart - Fast Trading Chart</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://hexo.io/zh-cn/docs/zoom-view.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://hexo.io/zh-cn/docs/zoom-view.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <meta name="generator" content="SiaChart 3.7.1">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS 
+  <link rel="alternate" href="/atom.xml" title="SiaChart - Fast Trading Chart">
+  -->
+  <!-- Open Graph 
+  <meta name="description" content="视图缩放是指数据显示范围的缩放，而非图像本身的缩放。 视图缩放非精确缩放Chart提供以下粗略缩放的方法：/*! \brief 放大显示数据范围 * */void zoomIn();/*! \brief 缩小显示数据范围 * */void zoomOut(); 精确显示数据范围（索引）图表中的数据是根据key升序排序的，排序后的数据可以使用[0,n)来进行索引。可以调用以下方法，传入数据的索引值来">
+<meta property="og:type" content="website">
+<meta property="og:title" content="视图缩放和移动">
+<meta property="og:url" content="https://hexo.io/zh-cn/docs/zoom-view.html">
+<meta property="og:site_name" content="SiaChart - Fast Trading Chart">
+<meta property="og:description" content="视图缩放是指数据显示范围的缩放，而非图像本身的缩放。 视图缩放非精确缩放Chart提供以下粗略缩放的方法：/*! \brief 放大显示数据范围 * */void zoomIn();/*! \brief 缩小显示数据范围 * */void zoomOut(); 精确显示数据范围（索引）图表中的数据是根据key升序排序的，排序后的数据可以使用[0,n)来进行索引。可以调用以下方法，传入数据的索引值来">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-11-21T09:04:09.295Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="视图缩放和移动">
+<meta name="twitter:description" content="视图缩放是指数据显示范围的缩放，而非图像本身的缩放。 视图缩放非精确缩放Chart提供以下粗略缩放的方法：/*! \brief 放大显示数据范围 * */void zoomIn();/*! \brief 缩小显示数据范围 * */void zoomOut(); 精确显示数据范围（索引）图表中的数据是根据key升序排序的，排序后的数据可以使用[0,n)来进行索引。可以调用以下方法，传入数据的索引值来">
+  -->
+  <!-- Google Analytics 
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-",
+          enable_page_level_ads: false
+     });
+  </script>
+  -->
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/zh-cn/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">新闻</a>
+      <a href="https://github.com/qiuchengw/siachart" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <!-- 
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+      -->
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/zoom-view.html">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">视图缩放和移动</h1>
+                <a href="https://github.com/qiuchengw/site/edit/master/source/zh-cn/docs/zoom-view.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>视图缩放是指数据显示范围的缩放，而非图像本身的缩放。</p>
+<h2 id="视图缩放" class="article-heading"><a href="#视图缩放" class="headerlink" title="视图缩放"></a>视图缩放<a class="article-anchor" href="#视图缩放" aria-hidden="true"></a></h2><h3 id="非精确缩放" class="article-heading"><a href="#非精确缩放" class="headerlink" title="非精确缩放"></a>非精确缩放<a class="article-anchor" href="#非精确缩放" aria-hidden="true"></a></h3><p>Chart提供以下粗略缩放的方法：<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 放大显示数据范围</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">zoomIn</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*! \brief 缩小显示数据范围</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">zoomOut</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="精确显示数据范围（索引）" class="article-heading"><a href="#精确显示数据范围（索引）" class="headerlink" title="精确显示数据范围（索引）"></a>精确显示数据范围（索引）<a class="article-anchor" href="#精确显示数据范围（索引）" aria-hidden="true"></a></h3><p>图表中的数据是根据key升序排序的，排序后的数据可以使用[0,n)来进行索引。可以调用以下方法，传入数据的索引值来精确显示数据范围：<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 设置当前显示的区域</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *    @param    begin 显示开始index</span></span><br><span class="line"><span class="comment"> *    @param    end 显示结束index。-1：显示到最后一条数据</span></span><br><span class="line"><span class="comment"> *    @return</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setCurrentDomain</span><span class="params">(<span class="keyword">int32_t</span> begin = <span class="number">0</span>, <span class="keyword">int32_t</span> end = <span class="number">-1</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="开启键盘缩放功能" class="article-heading"><a href="#开启键盘缩放功能" class="headerlink" title="开启键盘缩放功能"></a>开启键盘缩放功能<a class="article-anchor" href="#开启键盘缩放功能" aria-hidden="true"></a></h3><p>图表已提供了使用键盘缩放数据显示范围的功能，开启此功能后，可以使用<code>上下方向键</code>缩放视图。启用或禁用此功能：请参考<a href="builtin-func.html">启用内建功能</a>。</p>
+<h2 id="左右导航数据显示" class="article-heading"><a href="#左右导航数据显示" class="headerlink" title="左右导航数据显示"></a>左右导航数据显示<a class="article-anchor" href="#左右导航数据显示" aria-hidden="true"></a></h2><p>我们可以使用<code>setCurrentDomain</code>来左右移动视图显示。但是图表已提供了更方便的方法：<code>moveView</code>。此方法会自动检测偏移后的数据范围，确保显示正确。</p>
+<h3 id="通过方法调用左右导航" class="article-heading"><a href="#通过方法调用左右导航" class="headerlink" title="通过方法调用左右导航"></a>通过方法调用左右导航<a class="article-anchor" href="#通过方法调用左右导航" aria-hidden="true"></a></h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*! \brief 平移视图（数据显示范围）</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *    @param	offset	&gt;0 向右移动， &lt;0 向左移动，绝对值是移动的index数</span></span><br><span class="line"><span class="comment"> *    @return	返回false，代表移动失败（比如，向左已经移动到第0根index，或者向右已经是最后一个index）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">moveView</span><span class="params">(<span class="keyword">int</span> offset)</span></span>;</span><br></pre></td></tr></table></figure>
+<h3 id="开启键盘左右导航功能" class="article-heading"><a href="#开启键盘左右导航功能" class="headerlink" title="开启键盘左右导航功能"></a>开启键盘左右导航功能<a class="article-anchor" href="#开启键盘左右导航功能" aria-hidden="true"></a></h3><p>图表已提供了使用键盘左右导航数据显示的功能，开启此功能后，可以使用<code>CTRL + 左右方向键</code>来左右导航视图的显示。启用或禁用此功能：请参考<a href="builtin-func.html">启用内建功能</a>。</p>
+<blockquote>
+<h2 id="其他参考" class="article-heading"><a href="#其他参考" class="headerlink" title="其他参考"></a>其他参考<a class="article-anchor" href="#其他参考" aria-hidden="true"></a></h2><p><a href="builtin-func.html">启用/禁用内建功能</a><br><a href="style-rubber.html">定制框选外观</a></p>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-11-21T09:04:09.295Z" itemprop="dateModified">上次更新：2018-11-21</time>
+                <a href="crosshair.html" class="article-footer-prev" title="十字线"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="use-tooltip.html" class="article-footer-next" title="使用提示（Tooltip）"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=hexoio" id="_carbonads_js"></script> -->
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#视图缩放"><span class="toc-text">视图缩放</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#非精确缩放"><span class="toc-text">非精确缩放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#精确显示数据范围（索引）"><span class="toc-text">精确显示数据范围（索引）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启键盘缩放功能"><span class="toc-text">开启键盘缩放功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#左右导航数据显示"><span class="toc-text">左右导航数据显示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过方法调用左右导航"><span class="toc-text">通过方法调用左右导航</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启键盘左右导航功能"><span class="toc-text">开启键盘左右导航功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他参考"><span class="toc-text">其他参考</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">初步认识</strong><a href="index.html" class="sidebar-link">图表简介</a><a href="series-types.html" class="sidebar-link">认识序列</a><a href="example.html" class="sidebar-link">快速上手：一个例子</a><strong class="sidebar-title">定制图表</strong><a href="builtin-func.html" class="sidebar-link">启用/禁用内建功能</a><a href="datasource.html" class="sidebar-link">数据源</a><a href="panel-series.html" class="sidebar-link">面板和序列</a><a href="precision.html" class="sidebar-link">显示精度</a><a href="add-object.html" class="sidebar-link">添加对象</a><a href="crosshair.html" class="sidebar-link">十字线</a><a href="zoom-view.html" class="sidebar-link current">视图缩放/移动</a><a href="use-tooltip.html" class="sidebar-link">使用提示（Tooltip）</a><a href="use-dict.html" class="sidebar-link">字典翻译</a><strong class="sidebar-title">外观显示</strong><a href="style-luasyntax.html" class="sidebar-link">lua配置语法基础</a><a href="style-luaconfig.html" class="sidebar-link">配置文件</a><a href="style-series.html" class="sidebar-link">序列(Series)外观</a><strong class="sidebar-title">公式系统（公式）</strong><a href="formula-builtin.html" class="sidebar-link">使用内建公式</a><a href="formula-dev.html" class="sidebar-link">自定义公式开发</a><strong class="sidebar-title">对象</strong><a href="object-overview.html" class="sidebar-link">对象概览</a><a href="object-position.html" class="sidebar-link">对象的定位</a><a href="object-text.html" class="sidebar-link">文本对象</a><a href="object-picture.html" class="sidebar-link">图片对象</a><a href="object-movie.html" class="sidebar-link">动态对象</a><a href="object-custom.html" class="sidebar-link">自定义对象</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://piaode.ren" target="_blank">qiuchengw - 漂的人</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+     <!-- <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a> -->
+      <a href="https://piaode.ren" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/qiuchengw/siachart" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/zh-cn/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">新闻</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/qiuchengw/siachart" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">初步认识</strong><a href="index.html" class="mobile-nav-link">图表简介</a><a href="series-types.html" class="mobile-nav-link">认识序列</a><a href="example.html" class="mobile-nav-link">快速上手：一个例子</a><strong class="mobile-nav-title">定制图表</strong><a href="builtin-func.html" class="mobile-nav-link">启用/禁用内建功能</a><a href="datasource.html" class="mobile-nav-link">数据源</a><a href="panel-series.html" class="mobile-nav-link">面板和序列</a><a href="precision.html" class="mobile-nav-link">显示精度</a><a href="add-object.html" class="mobile-nav-link">添加对象</a><a href="crosshair.html" class="mobile-nav-link">十字线</a><a href="zoom-view.html" class="mobile-nav-link current">视图缩放/移动</a><a href="use-tooltip.html" class="mobile-nav-link">使用提示（Tooltip）</a><a href="use-dict.html" class="mobile-nav-link">字典翻译</a><strong class="mobile-nav-title">外观显示</strong><a href="style-luasyntax.html" class="mobile-nav-link">lua配置语法基础</a><a href="style-luaconfig.html" class="mobile-nav-link">配置文件</a><a href="style-series.html" class="mobile-nav-link">序列(Series)外观</a><strong class="mobile-nav-title">公式系统（公式）</strong><a href="formula-builtin.html" class="mobile-nav-link">使用内建公式</a><a href="formula-dev.html" class="mobile-nav-link">自定义公式开发</a><strong class="mobile-nav-title">对象</strong><a href="object-overview.html" class="mobile-nav-link">对象概览</a><a href="object-position.html" class="mobile-nav-link">对象的定位</a><a href="object-text.html" class="mobile-nav-link">文本对象</a><a href="object-picture.html" class="mobile-nav-link">图片对象</a><a href="object-movie.html" class="mobile-nav-link">动态对象</a><a href="object-custom.html" class="mobile-nav-link">自定义对象</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/zoom-view.html">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
