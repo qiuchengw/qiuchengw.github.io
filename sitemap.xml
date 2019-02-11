@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.io/news/2019/02/11/SiaChart-%E5%BC%80%E6%BA%90%E4%BA%86/</loc>
+    
+    <lastmod>2019-02-11T10:22:40.001Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hexo.io/zh-cn/index.html</loc>
     
     <lastmod>2019-02-11T06:11:53.762Z</lastmod>
@@ -9,21 +16,14 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/news/2014/07/13/hexo-2-8-released/</loc>
-    
-    <lastmod>2019-02-11T03:46:51.170Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/zoom-view.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/use-tooltip.html</loc>
     
     <lastmod>2018-11-21T09:04:09.295Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/use-tooltip.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/zoom-view.html</loc>
     
     <lastmod>2018-11-21T09:04:09.295Z</lastmod>
     
@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/style-series.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/style-luasyntax.html</loc>
     
     <lastmod>2018-11-21T09:04:09.294Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/style-luasyntax.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/style-series.html</loc>
     
     <lastmod>2018-11-21T09:04:09.294Z</lastmod>
     
@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/precision.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.293Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hexo.io/zh-cn/docs/panel-series.html</loc>
     
     <lastmod>2018-11-21T09:04:09.293Z</lastmod>
@@ -79,9 +72,9 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/object-picture.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/precision.html</loc>
     
-    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
+    <lastmod>2018-11-21T09:04:09.293Z</lastmod>
     
   </url>
   
@@ -93,7 +86,14 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/object-text.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/object-picture.html</loc>
+    
+    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-overview.html</loc>
     
     <lastmod>2018-11-21T09:04:09.292Z</lastmod>
     
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/object-overview.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/object-text.html</loc>
     
     <lastmod>2018-11-21T09:04:09.292Z</lastmod>
     
@@ -135,21 +135,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/formula-builtin.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hexo.io/zh-cn/docs/crosshair.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/datasource.html</loc>
     
     <lastmod>2018-11-21T09:04:09.283Z</lastmod>
     
@@ -163,14 +149,28 @@
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/builtin-func.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/formula-builtin.html</loc>
+    
+    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/datasource.html</loc>
+    
+    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/add-object.html</loc>
     
     <lastmod>2018-11-21T09:04:09.282Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.io/zh-cn/docs/add-object.html</loc>
+    <loc>https://hexo.io/zh-cn/docs/builtin-func.html</loc>
     
     <lastmod>2018-11-21T09:04:09.282Z</lastmod>
     
