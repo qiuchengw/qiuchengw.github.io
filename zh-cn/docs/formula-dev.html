@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>建站 | SiaChart - Fast Trading Chart</title>
+  <title>公式开发 | SiaChart - Fast Trading Chart</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -41,17 +41,17 @@
   <link rel="alternate" href="/atom.xml" title="SiaChart - Fast Trading Chart">
   -->
   <!-- Open Graph 
-  <meta name="description" content="图表提供了公式开发的环境，您可以方便的实现自己的公式。 公式管理器/*! * \class FormulaMan * * \brief 管理系统中已注册的公式 * */class FORMULA_API FormulaMan&amp;#123;...&amp;#125; 开发一个公式注册新的公式到管理器使用公式">
+  <meta name="description" content="公式是一组抽象的流程标准化的算法，可以独立于图表而存在。公式的开发可以分为以下几个标准的流程：  实现formula::IFormula接口类 注册到公式管理器formula::FormulaMan 使用formula::FormulaMan::create创建公式实例。 使用公式实例。  公式管理器FormulaMan用于管理公式的注册/查询/创建/销毁等。 class FORMULA_API">
 <meta property="og:type" content="website">
-<meta property="og:title" content="建站">
+<meta property="og:title" content="公式开发">
 <meta property="og:url" content="https://hexo.io/zh-cn/docs/formula-dev.html">
 <meta property="og:site_name" content="SiaChart - Fast Trading Chart">
-<meta property="og:description" content="图表提供了公式开发的环境，您可以方便的实现自己的公式。 公式管理器/*! * \class FormulaMan * * \brief 管理系统中已注册的公式 * */class FORMULA_API FormulaMan&amp;#123;...&amp;#125; 开发一个公式注册新的公式到管理器使用公式">
+<meta property="og:description" content="公式是一组抽象的流程标准化的算法，可以独立于图表而存在。公式的开发可以分为以下几个标准的流程：  实现formula::IFormula接口类 注册到公式管理器formula::FormulaMan 使用formula::FormulaMan::create创建公式实例。 使用公式实例。  公式管理器FormulaMan用于管理公式的注册/查询/创建/销毁等。 class FORMULA_API">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-11-21T09:04:09.284Z">
+<meta property="og:updated_time" content="2018-11-13T01:28:34.306Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="建站">
-<meta name="twitter:description" content="图表提供了公式开发的环境，您可以方便的实现自己的公式。 公式管理器/*! * \class FormulaMan * * \brief 管理系统中已注册的公式 * */class FORMULA_API FormulaMan&amp;#123;...&amp;#125; 开发一个公式注册新的公式到管理器使用公式">
+<meta name="twitter:title" content="公式开发">
+<meta name="twitter:description" content="公式是一组抽象的流程标准化的算法，可以独立于图表而存在。公式的开发可以分为以下几个标准的流程：  实现formula::IFormula接口类 注册到公式管理器formula::FormulaMan 使用formula::FormulaMan::create创建公式实例。 使用公式实例。  公式管理器FormulaMan用于管理公式的注册/查询/创建/销毁等。 class FORMULA_API">
   -->
   <!-- Google Analytics 
   
@@ -103,21 +103,30 @@
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">建站</h1>
+                <h1 class="article-title" itemprop="name">公式开发</h1>
                 <a href="https://github.com/qiuchengw/siachart-doc/edit/master/source/zh-cn/docs/formula-dev.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>图表提供了公式开发的环境，您可以方便的实现自己的公式。</p>
-<h2 id="公式管理器" class="article-heading"><a href="#公式管理器" class="headerlink" title="公式管理器"></a>公式管理器<a class="article-anchor" href="#公式管理器" aria-hidden="true"></a></h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*!</span></span><br><span class="line"><span class="comment"> * \class FormulaMan</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * \brief 管理系统中已注册的公式</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FORMULA_API</span> <span class="title">FormulaMan</span>&#123;</span>...&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="开发一个公式" class="article-heading"><a href="#开发一个公式" class="headerlink" title="开发一个公式"></a>开发一个公式<a class="article-anchor" href="#开发一个公式" aria-hidden="true"></a></h2><h2 id="注册新的公式到管理器" class="article-heading"><a href="#注册新的公式到管理器" class="headerlink" title="注册新的公式到管理器"></a>注册新的公式到管理器<a class="article-anchor" href="#注册新的公式到管理器" aria-hidden="true"></a></h2><h2 id="使用公式" class="article-heading"><a href="#使用公式" class="headerlink" title="使用公式"></a>使用公式<a class="article-anchor" href="#使用公式" aria-hidden="true"></a></h2>
+                <p>公式是一组抽象的流程标准化的算法，可以独立于图表而存在。公式的开发可以分为以下几个标准的流程：</p>
+<ol>
+<li>实现<code>formula::IFormula</code>接口类</li>
+<li>注册到公式管理器<code>formula::FormulaMan</code></li>
+<li>使用<code>formula::FormulaMan::create</code>创建公式实例。</li>
+<li>使用公式实例。</li>
+</ol>
+<h2 id="公式管理器" class="article-heading"><a href="#公式管理器" class="headerlink" title="公式管理器"></a>公式管理器<a class="article-anchor" href="#公式管理器" aria-hidden="true"></a></h2><p><code>FormulaMan</code>用于管理公式的注册/查询/创建/销毁等。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FORMULA_API</span> <span class="title">FormulaMan</span>&#123;</span>...&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="公式接口类" class="article-heading"><a href="#公式接口类" class="headerlink" title="公式接口类"></a>公式接口类<a class="article-anchor" href="#公式接口类" aria-hidden="true"></a></h2><p><code>SiaChart</code>中的所有公式都必须实现<code>IFormula</code>虚拟接口类：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FORMULA_API</span> <span class="title">IFormula</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="注册新的公式到管理器" class="article-heading"><a href="#注册新的公式到管理器" class="headerlink" title="注册新的公式到管理器"></a>注册新的公式到管理器<a class="article-anchor" href="#注册新的公式到管理器" aria-hidden="true"></a></h2><h2 id="使用公式" class="article-heading"><a href="#使用公式" class="headerlink" title="使用公式"></a>使用公式<a class="article-anchor" href="#使用公式" aria-hidden="true"></a></h2>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-21T09:04:09.284Z" itemprop="dateModified">上次更新：2018-11-21</time>
+                <time class="article-footer-updated" datetime="2018-11-13T01:28:34.306Z" itemprop="dateModified">上次更新：2018-11-13</time>
                 <a href="formula-builtin.html" class="article-footer-prev" title="使用内建公式"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="object-overview.html" class="article-footer-next" title="对象概览"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -127,7 +136,7 @@
             <div id="article-toc-inner">
               <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=hexoio" id="_carbonads_js"></script> -->
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#公式管理器"><span class="toc-text">公式管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发一个公式"><span class="toc-text">开发一个公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册新的公式到管理器"><span class="toc-text">注册新的公式到管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用公式"><span class="toc-text">使用公式</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#公式管理器"><span class="toc-text">公式管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#公式接口类"><span class="toc-text">公式接口类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册新的公式到管理器"><span class="toc-text">注册新的公式到管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用公式"><span class="toc-text">使用公式</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

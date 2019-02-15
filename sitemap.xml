@@ -2,191 +2,191 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hexo.io/news/2019/02/11/SiaChart-%E5%BC%80%E6%BA%90%E4%BA%86/</loc>
-    
-    <lastmod>2019-02-11T10:22:40.001Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hexo.io/zh-cn/index.html</loc>
     
-    <lastmod>2019-02-11T06:11:53.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/use-tooltip.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.295Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/zoom-view.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.295Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/use-dict.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.295Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/style-luasyntax.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.294Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/style-series.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.294Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/style-luaconfig.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.293Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/series-types.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.293Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/panel-series.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.293Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/precision.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.293Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/object-movie.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/object-picture.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/object-overview.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/object-position.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/object-text.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.292Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/object-custom.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.291Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/index.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.291Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/formula-dev.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.284Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/crosshair.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/example.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/formula-builtin.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/datasource.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/add-object.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.282Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.io/zh-cn/docs/builtin-func.html</loc>
-    
-    <lastmod>2018-11-21T09:04:09.282Z</lastmod>
+    <lastmod>2019-02-15T05:22:10.798Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://hexo.io/plugins/index.html</loc>
     
-    <lastmod>2018-11-21T09:04:08.706Z</lastmod>
+    <lastmod>2019-02-15T05:22:10.786Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://hexo.io/about/index.html</loc>
     
-    <lastmod>2018-11-21T09:04:08.692Z</lastmod>
+    <lastmod>2019-02-15T05:22:10.778Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/news/2019/02/11/SiaChart-%E5%BC%80%E6%BA%90%E4%BA%86/</loc>
+    
+    <lastmod>2019-02-15T05:22:10.777Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/formula-dev.html</loc>
+    
+    <lastmod>2018-11-13T01:28:34.306Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/formula-builtin.html</loc>
+    
+    <lastmod>2018-11-12T13:54:36.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/index.html</loc>
+    
+    <lastmod>2018-11-12T13:34:09.931Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/series-types.html</loc>
+    
+    <lastmod>2018-11-12T10:09:46.295Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/style-series.html</loc>
+    
+    <lastmod>2018-11-12T07:53:06.515Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/precision.html</loc>
+    
+    <lastmod>2018-11-12T07:52:13.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/use-tooltip.html</loc>
+    
+    <lastmod>2018-11-01T05:26:44.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/style-luaconfig.html</loc>
+    
+    <lastmod>2018-10-30T14:29:02.096Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/style-luasyntax.html</loc>
+    
+    <lastmod>2018-10-30T14:27:15.679Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/datasource.html</loc>
+    
+    <lastmod>2018-10-29T09:01:43.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/use-dict.html</loc>
+    
+    <lastmod>2018-10-26T01:48:36.342Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/crosshair.html</loc>
+    
+    <lastmod>2018-10-20T01:59:11.565Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/zoom-view.html</loc>
+    
+    <lastmod>2018-10-19T07:23:44.145Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/add-object.html</loc>
+    
+    <lastmod>2018-10-19T04:38:55.348Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-overview.html</loc>
+    
+    <lastmod>2018-10-19T04:29:08.123Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/panel-series.html</loc>
+    
+    <lastmod>2018-10-18T09:42:46.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/builtin-func.html</loc>
+    
+    <lastmod>2018-10-14T14:24:42.492Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-text.html</loc>
+    
+    <lastmod>2018-10-12T08:19:46.078Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-position.html</loc>
+    
+    <lastmod>2018-10-12T08:19:32.798Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-picture.html</loc>
+    
+    <lastmod>2018-10-12T08:18:30.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-movie.html</loc>
+    
+    <lastmod>2018-10-12T08:16:54.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/object-custom.html</loc>
+    
+    <lastmod>2018-10-12T08:16:22.159Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.io/zh-cn/docs/example.html</loc>
+    
+    <lastmod>2018-10-12T08:02:26.704Z</lastmod>
     
   </url>
   
